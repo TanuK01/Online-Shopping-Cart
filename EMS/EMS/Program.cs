@@ -12,7 +12,6 @@ namespace LitWareLib
         static void Main(string[] args)
         {
             List<Employee> employees = new List<Employee>();
-            //bool a = true;
 
             Console.WriteLine("Litware Organization Employee Record");
             Console.WriteLine("*****************************************");
