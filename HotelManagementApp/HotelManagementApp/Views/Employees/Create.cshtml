@@ -1,0 +1,68 @@
+﻿@model HotelManagementApp.Models.Employee
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Employee</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="employeeName" class="control-label"></label>
+                <input asp-for="employeeName" class="form-control" />
+                <span asp-validation-for="employeeName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="employeePassword" class="control-label"></label>
+                <input asp-for="employeePassword" class="form-control" />
+                <span asp-validation-for="employeePassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="employeeAge" class="control-label"></label>
+                <input asp-for="employeeAge" class="form-control" />
+                <span asp-validation-for="employeeAge" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="employeeDesignation" class="control-label"></label>
+                <input asp-for="employeeDesignation" class="form-control" />
+                <span asp-validation-for="employeeDesignation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="employeeSalary" class="control-label"></label>
+                <input asp-for="employeeSalary" class="form-control" />
+                <span asp-validation-for="employeeSalary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="employeeMail" class="control-label"></label>
+                <input asp-for="employeeMail" class="form-control" />
+                <span asp-validation-for="employeeMail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="employeeContact" class="control-label"></label>
+                <input asp-for="employeeContact" class="form-control" />
+                <span asp-validation-for="employeeContact" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="employeeAddress" class="control-label"></label>
+                <input asp-for="employeeAddress" class="form-control" />
+                <span asp-validation-for="employeeAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
